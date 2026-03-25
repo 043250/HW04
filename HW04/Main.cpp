@@ -106,7 +106,7 @@ int main()
 	workshop.AddRecipe("Stamina Potion", "Herb");
 	workshop.AddRecipe("Fire Resistance Potion", "Fire Flower");
 
-	std::cout << "=== 초기 상태 ===\n";
+	std::cout << "=== Start State ===\n";
 	workshop.DisplayAllRecipes();
 
 	try {
@@ -120,19 +120,19 @@ int main()
 	std::vector<PotionRecipe> herbRecipes = workshop.SearchRecipeByIngredient("Herb");
 	std::cout << "Herb를 사용하는 레시피 수: " << herbRecipes.size() << std::endl;
 
-	std::cout << "\n=== 지급 테스트 ===\n";
+	std::cout << "\n=== Give State ===\n";
 	workshop.GivePotion("Healing Potion");
 	workshop.GivePotion("Healing Potion");
 	workshop.GivePotion("Healing Potion");
 	workshop.GivePotion("Healing Potion");
 
-	std::cout << "\n=== 반환 테스트 ===\n";
+	std::cout << "\n=== Return State ===\n";
 	workshop.ReturnPotion("Healing Potion");
 	workshop.ReturnPotion("Healing Potion");
 	workshop.ReturnPotion("Healing Potion");
 	workshop.ReturnPotion("Healing Potion");
 
-	std::cout << "\n=== 최종 상태 ===\n";
+	std::cout << "\n=== Final State ===\n";
 	workshop.DisplayAllRecipes();
 
 	return 0;
